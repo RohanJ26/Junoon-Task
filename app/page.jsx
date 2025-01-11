@@ -6,6 +6,7 @@ import Div100vh from "@/components/Div100vh";
 import StorygramCards from "@/components/StorygramCards";
 import fetchData from "@/lib/sanity/fetchData";
 import fetchLogo from "@/lib/sanity/fetchLogo";
+import PhotoOfTheDay from "@/components/PhotoOfTheDay";
 
 export default async function Home() {
   const homeData = await fetchData("home");
@@ -67,6 +68,9 @@ export default async function Home() {
             ))}
           </div>
         </div>
+
+        {/* Photo of the Day */}
+        <PhotoOfTheDay />
 
         {/* featured shots */}
         <div className="featured pb-[3vw] pt-[7vw]">
